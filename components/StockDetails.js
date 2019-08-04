@@ -21,9 +21,6 @@ const StockDetails = ({ stock, state, watchlist }) => {
   }
 
   const gotochart = () => {
-    // watchlist.props.navigation.setParams({
-    //   symbol: stock.symbol
-    // })
     watchlist.props.navigation.navigate('StockChart',{symbol:stock.symbol});
   }
 

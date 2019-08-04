@@ -18,7 +18,9 @@ const StockCard = ({ id, name, symbol, type, isSelected, state }) => {
 
   const onPress = () => {
     console.log(symbol + "," + name);
-    state.stocklist.push({ symbol: symbol, name: name });
+    new_stocklist = state.stocklist.filter(item=> item.symbol == symbol);
+    if(new_stocklist.length>0)
+      state.stocklist.push({ symbol: symbol, name: name });
   }
 
   return (

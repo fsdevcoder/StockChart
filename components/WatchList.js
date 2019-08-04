@@ -54,7 +54,6 @@ class WatchList extends React.Component {
                 this.setState({
                     symbollist: responseJson,
                 });
-                // console.log(this.state.symbollist);
             })
             .catch((error) => {
                 console.log(error);

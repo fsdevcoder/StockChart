@@ -30,6 +30,7 @@ class HeaderDropdown extends React.Component {
           <Text style={styles.text}>{this.props.title}</Text>
           <View style={styles.iconWrap}>
             <Ionicons
+              style={styles.iconWrap}
               name={isStockDropdownVisible ? 'ios-arrow-up' : 'ios-arrow-down'}
               color={'rgba(255, 255, 255, 0.7)'}
               size={14}
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft:-22,
   },
   text: {
     display: 'flex',
@@ -59,11 +61,13 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    marginLeft:0,
   },
   iconWrap: {
     marginTop: 2,
     marginLeft: 3,
     justifyContent: 'center',
+    // marginRight:20,
   }
 })
 

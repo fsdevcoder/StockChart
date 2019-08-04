@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput, View, Text, Button, StyleSheet } from 'react-native';
+import { TextInput, View, Text, Button, Alert } from 'react-native';
 import { withNavigation } from 'react-navigation'
 import mainstyles from "../assets/styles";
 
@@ -33,7 +33,20 @@ class Login extends React.Component {
                 />
                 <Button
                     title="Login"
-                    onPress={() => this.props.navigation.navigate('WatchList')}
+                    onPress={() =>{
+                        if(this.state.username=="keith" && this.state.password=="123")
+                            this.props.navigation.navigate('WatchList')
+                        else
+                            Alert.alert(
+                                'Login error!',
+                                'Please type correct username and password',
+                                [
+                                    {text: 'OK', onPress: () => console.log('OK Pressed')},
+                                ],
+                                {cancelable: false},
+                            );
+                        }
+                    }
                 />
             </View>
         );
